@@ -22,6 +22,12 @@ opt.smartindent = true
 opt.tabstop = 4
 opt.softtabstop = 4
 
+-- for later...
+--opt.swapfile = false
+--opt.backup = false
+--opt.undodir = os.getenv("HOME") .. "/.undodir/"
+--opt.undofile = true
+
 opt.fillchars = { eob = " " }
 opt.ignorecase = true
 opt.smartcase = true
@@ -29,8 +35,10 @@ opt.mouse = "a"
 
 -- Numbers
 opt.number = true
+opt.relativenumber = true
 opt.numberwidth = 2
 opt.ruler = false
+opt.scrolloff = 4
 
 -- disable nvim intro
 opt.shortmess:append "sI"
@@ -43,7 +51,7 @@ opt.timeoutlen = 400
 opt.undofile = true
 
 -- interval for writing swap file to disk, also used by gitsigns
-opt.updatetime = 250
+opt.updatetime = 100
 
 -- go to previous/next line with h,l,left arrow and right arrow
 -- when cursor reaches end/beginning of line
