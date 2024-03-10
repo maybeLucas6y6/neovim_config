@@ -55,6 +55,12 @@ M.theprimeagen = {
     },
     i = {
         --["<Esc>"] = { "<C-c>", "idk" },
+    },
+}
+
+M.fugitive = {
+    n = {
+        ["<leader>gs"] = { vim.cmd.Git, "Git status" },
     }
 }
 

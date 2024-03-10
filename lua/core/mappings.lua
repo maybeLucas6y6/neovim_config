@@ -29,10 +29,6 @@ M.general = {
         -- Copy all
         ["<C-c>"] = { "<cmd> %y+ <CR>", "Copy whole file" },
 
-        -- line numbers
-        ["<leader>n"] = { "<cmd> set nu! <CR>", "Toggle line number" },
-        ["<leader>rn"] = { "<cmd> set rnu! <CR>", "Toggle relative number" },
-
         -- Allow moving the cursor through wrapped lines with j, k, <Up> and <Down>
         -- http://www.reddit.com/r/vim/comments/2k4cbr/problem_with_gj_and_gk/
         -- empty mode is same as using <cmd> :map
@@ -81,14 +77,14 @@ M.tabufline = {
 
     n = {
         -- cycle through buffers
-        ["<tab>"] = {
+        ["<A-.>"] = {
             function()
                 require("nvchad.tabufline").tabuflineNext()
             end,
             "Goto next buffer",
         },
 
-        ["<S-tab>"] = {
+        ["<A-,>"] = {
             function()
                 require("nvchad.tabufline").tabuflinePrev()
             end,
@@ -96,7 +92,7 @@ M.tabufline = {
         },
 
         -- close buffer + hide terminal buffer
-        ["<leader>x"] = {
+        ["<A-c>"] = {
             function()
                 require("nvchad.tabufline").close_buffer()
             end,
@@ -283,6 +279,7 @@ M.telescope = {
         -- git
         ["<leader>cm"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
         ["<leader>gt"] = { "<cmd> Telescope git_status <CR>", "Git status" },
+        ["<leader>fg"] = { "<cmd> Telescope git_files <CR>", "Find in git files" },
 
         -- pick a hidden term
         ["<leader>pt"] = { "<cmd> Telescope terms <CR>", "Pick hidden term" },

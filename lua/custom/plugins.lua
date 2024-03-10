@@ -96,5 +96,9 @@ local plugins = {
             vim.g.rustfmt_autosave = 1
         end
     },
+    {
+        "tpope/vim-fugitive",
+        lazy=false,
+    },
 }
 return plugins
